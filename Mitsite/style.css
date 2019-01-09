@@ -1,0 +1,441 @@
+/*************Generelle instillinger*/
+
+section {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: #ededed
+}
+
+/**.img {
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 400px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+**/
+header,
+body {
+
+    display: flex;
+    display: block;
+}
+
+#front_background {
+    background: url(svg/ramme.svg);
+    height: 56.25vw;
+    width: 100vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+}
+
+header {
+    height: 130px;
+}
+
+p {
+    font-family: 'Helvetica', cursive;
+    text-align: center;
+    color: black;
+}
+
+h1 {
+
+    font-family: 'Helvetica', bold;
+    color: #393b3b;
+    font-size: 3vw;
+}
+
+h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: rem;
+
+    color: #6e6f6f;
+}
+
+h3 {
+
+    font-family: 'helvetica', cursive;
+    color: #3d4f5a;
+}
+
+h4 {
+
+    font-family: 'Helvetica', cursive;
+    color: #3d4f5a;
+    font-size: 1.4vw;
+}
+
+h5 {
+
+    font-family: 'Helvetica', cursive;
+    color: #1b01de;
+    font-size: 1.4vw;
+}
+
+
+hr {
+    width: 80%;
+    height: 8px;
+
+    background-color: #1b01de;
+    border: 0 none;
+
+}
+
+.sorthr {
+    width: 95%;
+    height: 8px;
+
+    background-color: #393b3b;
+    border: 0 none;
+
+}
+
+#splash {
+    max-width: 1100px;
+
+}
+
+/* Container holding the image and the text */
+.containersplash {
+    position: relative;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3vw;
+    font-family: 'helvetica', bold;
+}
+
+.undertekst {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    font-family: 'helvetica', bold;
+}
+
+
+/***************************Menu bar*/
+
+/* unvisited link */
+header nav a:link {
+    color: #000000;
+}
+
+/* visited link */
+header nav a:visited {
+    color: #000000;
+}
+
+/* mouse over link */
+header nav a:hover {
+    color: #db4d0f;
+    text-decoration: underline;
+}
+
+/* selected link */
+header nav a:active {
+    color: #000000;
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+header nav a {
+    font-size: 50px;
+    padding: 0.25rem;
+    text-decoration: none;
+    font-family: 'helvetica', sans-serif;
+    z-index: 1;
+    position: relative;
+
+}
+
+@media only screen and (min-width: 325px) {
+
+    header nav {
+        flex-direction: row;
+        padding-left: 11vw;
+    }
+
+    header nav a {
+        font-size: 3vw;
+        margin-right: 1.5vw;
+        justify-content: space-between;
+    }
+
+    /* mouse over link */
+    header nav a:hover {
+        color: #61a3cc;
+    }
+}
+
+hr {
+    width: 95%;
+    height: 8px;
+    background-color: #0a0ac3;
+    border: 0 none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*************************about*/
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 1200px;
+}
+
+#about .columns {
+    flex-basis: 450px;
+    flex-grow: 1;
+
+
+    padding: 45px;
+}
+
+#about h1 {
+    font-size: 3.2vw;
+
+}
+
+#about h2 {
+    font-size: 2.2vw;
+    color: #1b01de;
+}
+
+#about h3 {
+    font-size: 1.8vw;
+    color: #393b3b;
+}
+
+#about p {
+    font-size: 1.6vw;
+    text-align: left;
+}
+
+
+@media only screen and (min-width: 325px) {
+
+    #about h1 {
+        font-size: rem;
+
+    }
+
+
+    /***********************gallery*/
+
+    /* The grid: Four equal columns that floats next to each other */
+    .column {
+
+        padding: 10px;
+        flex-basis: 300px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    /* Style the images inside the grid */
+    .column img {
+        opacity: 0.7;
+        cursor: pointer;
+        max-height: none;
+
+    }
+
+
+
+
+
+    .column img:hover {
+        opacity: 1;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+
+    }
+
+    .row {
+        margin: 26px;
+        Display: flex;
+        Flex: wrap;
+    }
+
+    /* The expanding image container (positioning is needed to position the close button and the text) */
+    .container {
+        position: relative;
+        display: none;
+    }
+
+    /* Expanding image text */
+    #imgtext {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        color: white;
+        font-size: 20px;
+    }
+
+    /* Closable button inside the image */
+    .closebtn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+    }
+
+
+    /*************individuelle sider*/
+
+
+    #eksempler .columns {
+        flex-basis: 800px;
+        flex-grow: 1;
+        flex-direction: row;
+        display: flex;
+        padding: 10px;
+    }
+
+    .top {
+
+        max-width: px;
+        flex-grow: 1;
+    }
+
+    .bottom {
+
+        width: 100%;
+        flex-basis: 300px;
+    }
+
+    /****CV****/
+
+    .sectionwrapperabout {
+        display: flex;
+        min-width: 325px;
+
+
+    }
+
+    .sectionwrapperinfo {
+        display: flex;
+        max-width: 1200px;
+        justify-content: space-between;
+
+    }
+
+    .sectionwrapperkontakt {
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .billedecolumn {
+        flex-basis: 275px;
+        margin: 1.5vw;
+        background-image: url(billeder/migbillede.jpg);
+        max-width: 275px;
+        max-height: 250px;
+        flex-wrap: wrap;
+
+
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .storcolumn {
+        flex-basis: 800px;
+        line-height: 70%;
+        flex-wrap: wrap;
+    }
+
+    .texticv {
+
+        line-height: 200%;
+        font-size: 1.5vw;
+    }
+
+    .birth {
+        line-height: 0%;
+        max-width: 20px;
+    }
+
+    .born {
+        line-height: 0%;
+        max-width: 20px;
+    }
+
+    .sprog {
+        line-height: 0%;
+        max-width: px;
+    }
+
+    .opdel {
+        width: 102%;
+        height: 4px;
+        background-color: #393b3b;
+
+    }
+
+    .title {
+        flex-direction: row;
+    }
+
+    .columnlille {
+        display: flex;
+        justify-content: space-between
+    }
+
+
+    /***********OPGAVER**********/
+
+
+    #opgaver .columnmellem {
+
+        flex-basis: 600px;
+        flex-grow: 1;
+        min-width: 325px;
+        margin: 2vw;
+
+
+    }
